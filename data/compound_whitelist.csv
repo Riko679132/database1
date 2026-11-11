@@ -1,0 +1,5 @@
+standard_name,cas_no,smiles,inchikey,amine_class,purchasable,status
+MEA,141-43-5,NCCO,HZAXFHJVJLSVMW-UHFFFAOYSA-N,primary_amine,true,active
+PZ,110-85-0,C1CNCCN1,GLUUGHFVERTEDX-UHFFFAOYSA-N,cyclic_amine,true,active
+AMP,124-68-5,CC(C)(CO)N,CBTVGIZVANXIJB-UHFFFAOYSA-N,hindered_amine,true,active
+MDEA,105-59-9,CN(CCO)CCO,CRVGTESFCCXCTH-UHFFFAOYSA-N,tertiary_amine,true,active

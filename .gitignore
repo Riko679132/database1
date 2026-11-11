@@ -1,0 +1,41 @@
+# ===== 凭据与本地数据（防误传）=====
+config.yaml
+config.local.yaml
+.env
+*.env.local
+
+# 控制台运行时数据（运行日志、任务产物）
+data/control/
+
+# 原始全文与备份（含可能受版权保护的 PDF 与本地数据库副本）
+data/raw_pdfs/
+data/backups/
+data/*.sqlite
+data/.db.lock
+
+# 抽取产物（含原文摘录，按需保留本地）
+extractions/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+# tools/ 独立环境（campus-paper-fetch + playwright，体积数百 MB）
+tools/.venv/
+
+# Web 前端（node_modules、构建产物、脱敏快照均不入库）
+web/node_modules/
+web/dist/
+web/public/data/
+web/public/*.wasm
+
+# 打包与生成物
+release/
+碳捕集Agent使用手册.pdf
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

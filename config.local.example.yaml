@@ -1,0 +1,13 @@
+# 本地密钥模板：复制为 config.local.yaml 后填写（config.local.yaml 已在 .gitignore 中排除）
+# 也可以启动控制台后在「设置」页填写，效果相同
+ai:
+  provider: deepseek
+  base_url: https://api.deepseek.com/v1
+  api_key: ""
+  model: deepseek-chat
+
+elsevier:
+  api_key: ""
+
+unpaywall:
+  email: ""

@@ -1,0 +1,4 @@
+# 控制台服务依赖（装入根 .venv，与 tools/.venv 严格分离）
+# 安装：.venv\Scripts\pip.exe install -r requirements-server.txt
+fastapi
+uvicorn

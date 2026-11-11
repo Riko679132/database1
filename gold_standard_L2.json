@@ -1,0 +1,2515 @@
+{
+  "dataset": "CCUS aqueous amine L2 gold standard",
+  "generated_at": "2026-10-30T14:37:36",
+  "filter": "test.qc_level='L2' AND test.test_origin='literature'",
+  "notes": [
+    "仅含带原始数据快照（raw_data_path + sha256）的真实实验单点；无快照者已降为 L3。",
+    "simulation（机理模型）数据强制 L3，永不出现在本文件中。",
+    "performance.is_derived=1 表示由原始量按 metric_definition 计算得到。",
+    "同一 test 可能有多条 performance；rich/lean loading 在 loadings 字段。"
+  ],
+  "n_tests": 38,
+  "n_performance": 48,
+  "records": [
+    {
+      "test_id": 3,
+      "batch_id": "20261027_02",
+      "source": {
+        "doi": "10.1039/d6gc02196d",
+        "title": "Greening water-lean solvents for CO2 capture: replacing toxic 1-methyl-2-pyrrolidone with high-performance eco-friendly cosolvents",
+        "authors": "Li H.; Ding X.; Zhou T.",
+        "year": 2026,
+        "journal": "Green Chemistry",
+        "pdf_path": "data/raw_pdfs/10.1039_d6gc02196d_322344fe.pdf",
+        "pdf_hash": "322344fe195b7caf2d1e3e65facf243e989cb80885e0e3644d86297c3403b165",
+        "loc_type": "text",
+        "loc_label": "p.10541-10544, Experimental section (150 mL fresh solvent, 12 kPa CO2, 313 K) and regeneration performance"
+      },
+      "compound": {
+        "standard_name": "MEA",
+        "inchikey": "HZAXFHJVJLSVMW-UHFFFAOYSA-N",
+        "cas_no": "141-43-5",
+        "smiles": "NCCO",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "8e425b36e7ff9627cfd455e624cde0e9aac0eaf7",
+        "recipe_type": "mono",
+        "wt_a": 30.0,
+        "wt_b": null,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 12.0,
+        "co2_partial_kPa": 12.0,
+        "total_pressure_kPa": null,
+        "gas_flow": null,
+        "liquid_volume": null,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": null,
+        "lean": null
+      },
+      "performance": [
+        {
+          "metric_name": "regeneration_efficiency",
+          "value": 55.0,
+          "unit": "%",
+          "value_original": null,
+          "unit_original": null,
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "Cyclic capacity / rich loading after 250 min absorption at 313 K under 12 kPa CO2 and 300 min desorption at 353 K, aqueous MEA 30 wt%",
+          "is_derived": 0
+        },
+        {
+          "metric_name": "regeneration_heat",
+          "value": 3.72,
+          "unit": "GJ/t_CO2",
+          "value_original": null,
+          "unit_original": null,
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "Total regeneration heat (sensible + latent + reaction), aqueous MEA 30 wt%",
+          "is_derived": 1
+        }
+      ],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": null,
+        "raw_data_path": "extractions/20261027_02/test_3_L2.json",
+        "raw_data_hash": "e9171ef2e0a5d5ca7138aefd9801ebb8e4fb83e3929be440823b0cf49b1648ea"
+      }
+    },
+    {
+      "test_id": 24,
+      "batch_id": "20261027_06",
+      "source": {
+        "doi": "10.1016/j.jece.2024.112664",
+        "title": "Structural investigation of aqueous amine solutions for CO2 capture: CO2 loading, cyclic capacity, absorption-desorption rate, and pKa",
+        "authors": "Kim J.; Kim K.; Lim H.; Kang J.H.; Park H.S.; Park J.; Song H.",
+        "year": 2024,
+        "journal": "Journal of Environmental Chemical Engineering",
+        "pdf_path": "data/raw_pdfs/10.1016_j.jece.2024.112664_4723c6c1.pdf",
+        "pdf_hash": "e0fdecac87f72db437f54bffe3b33a7df230228cf2c095ccd4a8dc4ee61914c6",
+        "loc_type": "table",
+        "loc_label": "p.6 Table 3 row 1 (MEA) + Table 2 (PCO2 0.15 bar) + p.4-5 Section 2.2 (method)"
+      },
+      "compound": {
+        "standard_name": "MEA",
+        "inchikey": "HZAXFHJVJLSVMW-UHFFFAOYSA-N",
+        "cas_no": "141-43-5",
+        "smiles": "NCCO",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "8e425b36e7ff9627cfd455e624cde0e9aac0eaf7",
+        "recipe_type": "mono",
+        "wt_a": 30.0,
+        "wt_b": null,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 15.0,
+        "co2_partial_kPa": 15.0,
+        "total_pressure_kPa": null,
+        "gas_flow": null,
+        "liquid_volume": null,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": 0.5372,
+        "lean": 0.3799
+      },
+      "performance": [
+        {
+          "metric_name": "cyclic_capacity",
+          "value": 0.1573,
+          "unit": "mol_CO2/mol_amine",
+          "value_original": 0.1573,
+          "unit_original": "mol CO2/mol amine",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "Eq.(3) rich minus lean loading; 30 wt% aqueous MEA, absorption 313.15 K under 15 vol% CO2 (N2 balance) bubbled at 2 L/min into 100 mL until outlet CO2 14.8 vol%, then desorption at 353.15 K under pure N2 sparging until outlet CO2 1.0 vol%",
+          "is_derived": 1
+        },
+        {
+          "metric_name": "regeneration_efficiency",
+          "value": 29.3,
+          "unit": "%",
+          "value_original": 29.3,
+          "unit_original": "%",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "Eq.(4) (rich-lean)/rich x 100, same absorbent and cycle conditions as the cyclic capacity entry",
+          "is_derived": 1
+        },
+        {
+          "metric_name": "initial_absorption_rate",
+          "value": 0.00034,
+          "unit": "mol_CO2/(mol_amine*s)",
+          "value_original": 34.0,
+          "unit_original": "1e-5 mol CO2/(mol amine*s)",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "Slope of linear regression of CO2 loading vs time over 0-10 min (Puxty et al. method), 30 wt% MEA, 313.15 K, 15 vol% CO2; authors label this semiquantitative",
+          "is_derived": 1
+        },
+        {
+          "metric_name": "initial_desorption_rate",
+          "value": 0.00013,
+          "unit": "mol_CO2/(mol_amine*s)",
+          "value_original": 13.0,
+          "unit_original": "1e-5 mol CO2/(mol amine*s)",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "Slope of linear regression of CO2 loading vs time over 0-10 min during N2-sparging desorption at 353.15 K, 30 wt% MEA",
+          "is_derived": 1
+        }
+      ],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": null,
+        "raw_data_path": "extractions/20261027_06/raw/jece2024_table3_snapshot.json",
+        "raw_data_hash": "a086b2677fb7e51140c371aeda0983caf368269287cccb69f6b8e5fbb38e1329"
+      }
+    },
+    {
+      "test_id": 25,
+      "batch_id": "20261027_06",
+      "source": {
+        "doi": "10.1016/j.jece.2024.112664",
+        "title": "Structural investigation of aqueous amine solutions for CO2 capture: CO2 loading, cyclic capacity, absorption-desorption rate, and pKa",
+        "authors": "Kim J.; Kim K.; Lim H.; Kang J.H.; Park H.S.; Park J.; Song H.",
+        "year": 2024,
+        "journal": "Journal of Environmental Chemical Engineering",
+        "pdf_path": "data/raw_pdfs/10.1016_j.jece.2024.112664_4723c6c1.pdf",
+        "pdf_hash": "e0fdecac87f72db437f54bffe3b33a7df230228cf2c095ccd4a8dc4ee61914c6",
+        "loc_type": "table",
+        "loc_label": "p.6 Table 3 row 5 (AMP) + Table 2 (PCO2 0.15 bar) + p.4-5 Section 2.2 (method)"
+      },
+      "compound": {
+        "standard_name": "AMP",
+        "inchikey": "CBTVGIZVANXIJB-UHFFFAOYSA-N",
+        "cas_no": "124-68-5",
+        "smiles": "CC(C)(CO)N",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "8afed570e1c6fc1624e3fa3961ef4075019c556d",
+        "recipe_type": "mono",
+        "wt_a": 30.0,
+        "wt_b": null,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 15.0,
+        "co2_partial_kPa": 15.0,
+        "total_pressure_kPa": null,
+        "gas_flow": null,
+        "liquid_volume": null,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": 0.6892,
+        "lean": 0.3535
+      },
+      "performance": [
+        {
+          "metric_name": "cyclic_capacity",
+          "value": 0.3357,
+          "unit": "mol_CO2/mol_amine",
+          "value_original": 0.3357,
+          "unit_original": "mol CO2/mol amine",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "Eq.(3) rich minus lean loading; 30 wt% aqueous AMP (sterically hindered primary amine), absorption 313.15 K under 15 vol% CO2 (N2 balance) bubbled at 2 L/min into 100 mL until outlet CO2 14.8 vol%, then desorption at 353.15 K under pure N2 sparging until outlet CO2 1.0 vol%",
+          "is_derived": 1
+        },
+        {
+          "metric_name": "regeneration_efficiency",
+          "value": 48.7,
+          "unit": "%",
+          "value_original": 48.7,
+          "unit_original": "%",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "Eq.(4) (rich-lean)/rich x 100, same absorbent and cycle conditions as the cyclic capacity entry",
+          "is_derived": 1
+        },
+        {
+          "metric_name": "initial_absorption_rate",
+          "value": 0.00027,
+          "unit": "mol_CO2/(mol_amine*s)",
+          "value_original": 27.0,
+          "unit_original": "1e-5 mol CO2/(mol amine*s)",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "Slope of linear regression of CO2 loading vs time over 0-10 min, 30 wt% AMP, 313.15 K, 15 vol% CO2; authors label this semiquantitative",
+          "is_derived": 1
+        },
+        {
+          "metric_name": "initial_desorption_rate",
+          "value": 0.000348,
+          "unit": "mol_CO2/(mol_amine*s)",
+          "value_original": 34.8,
+          "unit_original": "1e-5 mol CO2/(mol amine*s)",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "Slope of linear regression of CO2 loading vs time over 0-10 min during N2-sparging desorption at 353.15 K, 30 wt% AMP",
+          "is_derived": 1
+        }
+      ],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": null,
+        "raw_data_path": "extractions/20261027_06/raw/jece2024_table3_snapshot.json",
+        "raw_data_hash": "a086b2677fb7e51140c371aeda0983caf368269287cccb69f6b8e5fbb38e1329"
+      }
+    },
+    {
+      "test_id": 26,
+      "batch_id": "20261027_06",
+      "source": {
+        "doi": "10.1016/j.jece.2024.112664",
+        "title": "Structural investigation of aqueous amine solutions for CO2 capture: CO2 loading, cyclic capacity, absorption-desorption rate, and pKa",
+        "authors": "Kim J.; Kim K.; Lim H.; Kang J.H.; Park H.S.; Park J.; Song H.",
+        "year": 2024,
+        "journal": "Journal of Environmental Chemical Engineering",
+        "pdf_path": "data/raw_pdfs/10.1016_j.jece.2024.112664_4723c6c1.pdf",
+        "pdf_hash": "e0fdecac87f72db437f54bffe3b33a7df230228cf2c095ccd4a8dc4ee61914c6",
+        "loc_type": "table",
+        "loc_label": "p.6 Table 3 row 13 (MDEA) + Table 2 (PCO2 0.15 bar) + p.4-5 Section 2.2 (method)"
+      },
+      "compound": {
+        "standard_name": "MDEA",
+        "inchikey": "CRVGTESFCCXCTH-UHFFFAOYSA-N",
+        "cas_no": "105-59-9",
+        "smiles": "CN(CCO)CCO",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "3a99b7ef2f0fd422bbab68f3f1e5bdf707c28a46",
+        "recipe_type": "mono",
+        "wt_a": 30.0,
+        "wt_b": null,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 15.0,
+        "co2_partial_kPa": 15.0,
+        "total_pressure_kPa": null,
+        "gas_flow": null,
+        "liquid_volume": null,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": 0.3999,
+        "lean": 0.2124
+      },
+      "performance": [
+        {
+          "metric_name": "cyclic_capacity",
+          "value": 0.1875,
+          "unit": "mol_CO2/mol_amine",
+          "value_original": 0.1875,
+          "unit_original": "mol CO2/mol amine",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "Eq.(3) rich minus lean loading; 30 wt% aqueous MDEA (tertiary amine), absorption 313.15 K under 15 vol% CO2 (N2 balance) bubbled at 2 L/min into 100 mL until outlet CO2 14.8 vol%, then desorption at 353.15 K under pure N2 sparging until outlet CO2 1.0 vol%",
+          "is_derived": 1
+        },
+        {
+          "metric_name": "regeneration_efficiency",
+          "value": 46.9,
+          "unit": "%",
+          "value_original": 46.9,
+          "unit_original": "%",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "Eq.(4) (rich-lean)/rich x 100, same absorbent and cycle conditions as the cyclic capacity entry",
+          "is_derived": 1
+        },
+        {
+          "metric_name": "initial_absorption_rate",
+          "value": 0.000137,
+          "unit": "mol_CO2/(mol_amine*s)",
+          "value_original": 13.7,
+          "unit_original": "1e-5 mol CO2/(mol amine*s)",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "Slope of linear regression of CO2 loading vs time over 0-10 min, 30 wt% MDEA, 313.15 K, 15 vol% CO2; authors label this semiquantitative",
+          "is_derived": 1
+        },
+        {
+          "metric_name": "initial_desorption_rate",
+          "value": 0.000325,
+          "unit": "mol_CO2/(mol_amine*s)",
+          "value_original": 32.5,
+          "unit_original": "1e-5 mol CO2/(mol amine*s)",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "Slope of linear regression of CO2 loading vs time over 0-10 min during N2-sparging desorption at 353.15 K, 30 wt% MDEA",
+          "is_derived": 1
+        }
+      ],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": null,
+        "raw_data_path": "extractions/20261027_06/raw/jece2024_table3_snapshot.json",
+        "raw_data_hash": "a086b2677fb7e51140c371aeda0983caf368269287cccb69f6b8e5fbb38e1329"
+      }
+    },
+    {
+      "test_id": 27,
+      "batch_id": "20261027_07",
+      "source": {
+        "doi": "10.1016/j.apenergy.2016.03.043",
+        "title": "Aqueous amine solution characterization for post-combustion CO2 capture process",
+        "authors": "El Hadri N.; Quang D.V.; Goetheer E.L.V.; Abu Zahra M.R.M.",
+        "year": 2017,
+        "journal": "Applied Energy",
+        "pdf_path": "data/raw_pdfs/10.1016_j.apenergy.2016.03.043_ce9a3c49.pdf",
+        "pdf_hash": "4d4579d5ec1fe8ba636800100f8eb67c2dfa148182794cb7af1a89a70de672c9",
+        "loc_type": "table",
+        "loc_label": "p.1440 Table 3 row 1 (MEA) + Table 2 (PCO2 0.15 bar validation)"
+      },
+      "compound": {
+        "standard_name": "MEA",
+        "inchikey": "HZAXFHJVJLSVMW-UHFFFAOYSA-N",
+        "cas_no": "141-43-5",
+        "smiles": "NCCO",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "8e425b36e7ff9627cfd455e624cde0e9aac0eaf7",
+        "recipe_type": "mono",
+        "wt_a": 30.0,
+        "wt_b": null,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 15.0,
+        "co2_partial_kPa": 15.0,
+        "total_pressure_kPa": 100.0,
+        "gas_flow": null,
+        "liquid_volume": null,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": 0.58,
+        "lean": null
+      },
+      "performance": [],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": null,
+        "raw_data_path": "extractions/20261027_07/raw/elhadri2017_table3_snapshot.json",
+        "raw_data_hash": "a1481a22ecd755ee9cf38949ddf9a91a9946ca9d734bcd61825243c7c03e3a4a"
+      }
+    },
+    {
+      "test_id": 28,
+      "batch_id": "20261027_07",
+      "source": {
+        "doi": "10.1016/j.apenergy.2016.03.043",
+        "title": "Aqueous amine solution characterization for post-combustion CO2 capture process",
+        "authors": "El Hadri N.; Quang D.V.; Goetheer E.L.V.; Abu Zahra M.R.M.",
+        "year": 2017,
+        "journal": "Applied Energy",
+        "pdf_path": "data/raw_pdfs/10.1016_j.apenergy.2016.03.043_ce9a3c49.pdf",
+        "pdf_hash": "4d4579d5ec1fe8ba636800100f8eb67c2dfa148182794cb7af1a89a70de672c9",
+        "loc_type": "table",
+        "loc_label": "p.1440 Table 3 row 2 (MDEA) + Table 2 (PCO2 0.15 bar validation)"
+      },
+      "compound": {
+        "standard_name": "MDEA",
+        "inchikey": "CRVGTESFCCXCTH-UHFFFAOYSA-N",
+        "cas_no": "105-59-9",
+        "smiles": "CN(CCO)CCO",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "3a99b7ef2f0fd422bbab68f3f1e5bdf707c28a46",
+        "recipe_type": "mono",
+        "wt_a": 30.0,
+        "wt_b": null,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 15.0,
+        "co2_partial_kPa": 15.0,
+        "total_pressure_kPa": 100.0,
+        "gas_flow": null,
+        "liquid_volume": null,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": 0.52,
+        "lean": null
+      },
+      "performance": [],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": null,
+        "raw_data_path": "extractions/20261027_07/raw/elhadri2017_table3_snapshot.json",
+        "raw_data_hash": "a1481a22ecd755ee9cf38949ddf9a91a9946ca9d734bcd61825243c7c03e3a4a"
+      }
+    },
+    {
+      "test_id": 29,
+      "batch_id": "20261027_07",
+      "source": {
+        "doi": "10.1016/j.apenergy.2016.03.043",
+        "title": "Aqueous amine solution characterization for post-combustion CO2 capture process",
+        "authors": "El Hadri N.; Quang D.V.; Goetheer E.L.V.; Abu Zahra M.R.M.",
+        "year": 2017,
+        "journal": "Applied Energy",
+        "pdf_path": "data/raw_pdfs/10.1016_j.apenergy.2016.03.043_ce9a3c49.pdf",
+        "pdf_hash": "4d4579d5ec1fe8ba636800100f8eb67c2dfa148182794cb7af1a89a70de672c9",
+        "loc_type": "table",
+        "loc_label": "p.1440 Table 3 row 4 (AMP) + Table 2 (PCO2 0.15 bar validation)"
+      },
+      "compound": {
+        "standard_name": "AMP",
+        "inchikey": "CBTVGIZVANXIJB-UHFFFAOYSA-N",
+        "cas_no": "124-68-5",
+        "smiles": "CC(C)(CO)N",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "8afed570e1c6fc1624e3fa3961ef4075019c556d",
+        "recipe_type": "mono",
+        "wt_a": 30.0,
+        "wt_b": null,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 15.0,
+        "co2_partial_kPa": 15.0,
+        "total_pressure_kPa": 100.0,
+        "gas_flow": null,
+        "liquid_volume": null,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": 0.8,
+        "lean": null
+      },
+      "performance": [],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": null,
+        "raw_data_path": "extractions/20261027_07/raw/elhadri2017_table3_snapshot.json",
+        "raw_data_hash": "a1481a22ecd755ee9cf38949ddf9a91a9946ca9d734bcd61825243c7c03e3a4a"
+      }
+    },
+    {
+      "test_id": 30,
+      "batch_id": "20261027_07",
+      "source": {
+        "doi": "10.1016/j.apenergy.2016.03.043",
+        "title": "Aqueous amine solution characterization for post-combustion CO2 capture process",
+        "authors": "El Hadri N.; Quang D.V.; Goetheer E.L.V.; Abu Zahra M.R.M.",
+        "year": 2017,
+        "journal": "Applied Energy",
+        "pdf_path": "data/raw_pdfs/10.1016_j.apenergy.2016.03.043_ce9a3c49.pdf",
+        "pdf_hash": "4d4579d5ec1fe8ba636800100f8eb67c2dfa148182794cb7af1a89a70de672c9",
+        "loc_type": "table",
+        "loc_label": "p.1440 Table 3 row 5 (PZ) + Table 2 (PCO2 0.15 bar validation)"
+      },
+      "compound": {
+        "standard_name": "PZ",
+        "inchikey": "GLUUGHFVERTEDX-UHFFFAOYSA-N",
+        "cas_no": "110-85-0",
+        "smiles": "C1CNCCN1",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "fbc7a0647d6308d81e1db207509150615a597cb6",
+        "recipe_type": "mono",
+        "wt_a": 30.0,
+        "wt_b": null,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 15.0,
+        "co2_partial_kPa": 15.0,
+        "total_pressure_kPa": 100.0,
+        "gas_flow": null,
+        "liquid_volume": null,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": 0.81,
+        "lean": null
+      },
+      "performance": [],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": null,
+        "raw_data_path": "extractions/20261027_07/raw/elhadri2017_table3_snapshot.json",
+        "raw_data_hash": "a1481a22ecd755ee9cf38949ddf9a91a9946ca9d734bcd61825243c7c03e3a4a"
+      }
+    },
+    {
+      "test_id": 31,
+      "batch_id": "20261027_08",
+      "source": {
+        "doi": "10.1021/je00005a025",
+        "title": "Solubility of Carbon Dioxide in Aqueous Mixtures of Monoethanolamine with Methyldiethanolamine",
+        "authors": "Shen K.-P.; Li M.-H.",
+        "year": 1992,
+        "journal": "Journal of Chemical and Engineering Data",
+        "pdf_path": "data/raw_pdfs/10.1021_je00005a025_0770ae31.pdf",
+        "pdf_hash": "8558972992c38f88872908bf43e90932bdfced7adaaba7f3d27f696810029cd7",
+        "loc_type": "table",
+        "loc_label": "p.98 Table II (Solubility of CO2 in 30 wt% MDEA Aqueous Solution) row 1"
+      },
+      "compound": {
+        "standard_name": "MDEA",
+        "inchikey": "CRVGTESFCCXCTH-UHFFFAOYSA-N",
+        "cas_no": "105-59-9",
+        "smiles": "CN(CCO)CCO",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "3a99b7ef2f0fd422bbab68f3f1e5bdf707c28a46",
+        "recipe_type": "mono",
+        "wt_a": 30.0,
+        "wt_b": null,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 0.67,
+        "co2_partial_kPa": 1.2,
+        "total_pressure_kPa": 180.0,
+        "gas_flow": null,
+        "liquid_volume": 0.5,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": 0.244,
+        "lean": null
+      },
+      "performance": [
+        {
+          "metric_name": "equilibrium_loading",
+          "value": 0.244,
+          "unit": "mol_CO2/mol_amine",
+          "value_original": 0.244,
+          "unit_original": "mol CO2/mol amine",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "VLE equilibrium CO2 solubility in 30 wt% aqueous MDEA at 313.15 K and P_CO2=1.2 kPa; Table II of Shen & Li 1992, titration analysis",
+          "is_derived": 0
+        }
+      ],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": "vle_equilibrium_point;co2_vol_pct_derived_from_stated_total_pressure_180kPa;initial_loading_fresh_unloaded_solution",
+        "raw_data_path": "extractions/20261027_08/raw/shen1992_tableII_V_snapshot.json",
+        "raw_data_hash": "6e53610792242d73d8c36871eb0155d80bddb1701da6a216a7f241a3660b9846"
+      }
+    },
+    {
+      "test_id": 32,
+      "batch_id": "20261027_08",
+      "source": {
+        "doi": "10.1021/je00005a025",
+        "title": "Solubility of Carbon Dioxide in Aqueous Mixtures of Monoethanolamine with Methyldiethanolamine",
+        "authors": "Shen K.-P.; Li M.-H.",
+        "year": 1992,
+        "journal": "Journal of Chemical and Engineering Data",
+        "pdf_path": "data/raw_pdfs/10.1021_je00005a025_0770ae31.pdf",
+        "pdf_hash": "8558972992c38f88872908bf43e90932bdfced7adaaba7f3d27f696810029cd7",
+        "loc_type": "table",
+        "loc_label": "p.98 Table II (Solubility of CO2 in 30 wt% MDEA Aqueous Solution) row 2"
+      },
+      "compound": {
+        "standard_name": "MDEA",
+        "inchikey": "CRVGTESFCCXCTH-UHFFFAOYSA-N",
+        "cas_no": "105-59-9",
+        "smiles": "CN(CCO)CCO",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "3a99b7ef2f0fd422bbab68f3f1e5bdf707c28a46",
+        "recipe_type": "mono",
+        "wt_a": 30.0,
+        "wt_b": null,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 1.56,
+        "co2_partial_kPa": 2.8,
+        "total_pressure_kPa": 180.0,
+        "gas_flow": null,
+        "liquid_volume": 0.5,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": 0.306,
+        "lean": null
+      },
+      "performance": [
+        {
+          "metric_name": "equilibrium_loading",
+          "value": 0.306,
+          "unit": "mol_CO2/mol_amine",
+          "value_original": 0.306,
+          "unit_original": "mol CO2/mol amine",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "VLE equilibrium CO2 solubility in 30 wt% aqueous MDEA at 313.15 K and P_CO2=2.8 kPa; Table II of Shen & Li 1992, titration analysis",
+          "is_derived": 0
+        }
+      ],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": "vle_equilibrium_point;co2_vol_pct_derived_from_stated_total_pressure_180kPa;initial_loading_fresh_unloaded_solution",
+        "raw_data_path": "extractions/20261027_08/raw/shen1992_tableII_V_snapshot.json",
+        "raw_data_hash": "6e53610792242d73d8c36871eb0155d80bddb1701da6a216a7f241a3660b9846"
+      }
+    },
+    {
+      "test_id": 33,
+      "batch_id": "20261027_08",
+      "source": {
+        "doi": "10.1021/je00005a025",
+        "title": "Solubility of Carbon Dioxide in Aqueous Mixtures of Monoethanolamine with Methyldiethanolamine",
+        "authors": "Shen K.-P.; Li M.-H.",
+        "year": 1992,
+        "journal": "Journal of Chemical and Engineering Data",
+        "pdf_path": "data/raw_pdfs/10.1021_je00005a025_0770ae31.pdf",
+        "pdf_hash": "8558972992c38f88872908bf43e90932bdfced7adaaba7f3d27f696810029cd7",
+        "loc_type": "table",
+        "loc_label": "p.98 Table II (Solubility of CO2 in 30 wt% MDEA Aqueous Solution) row 3"
+      },
+      "compound": {
+        "standard_name": "MDEA",
+        "inchikey": "CRVGTESFCCXCTH-UHFFFAOYSA-N",
+        "cas_no": "105-59-9",
+        "smiles": "CN(CCO)CCO",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "3a99b7ef2f0fd422bbab68f3f1e5bdf707c28a46",
+        "recipe_type": "mono",
+        "wt_a": 30.0,
+        "wt_b": null,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 3.61,
+        "co2_partial_kPa": 6.5,
+        "total_pressure_kPa": 180.0,
+        "gas_flow": null,
+        "liquid_volume": 0.5,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": 0.401,
+        "lean": null
+      },
+      "performance": [
+        {
+          "metric_name": "equilibrium_loading",
+          "value": 0.401,
+          "unit": "mol_CO2/mol_amine",
+          "value_original": 0.401,
+          "unit_original": "mol CO2/mol amine",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "VLE equilibrium CO2 solubility in 30 wt% aqueous MDEA at 313.15 K and P_CO2=6.5 kPa; Table II of Shen & Li 1992, titration analysis",
+          "is_derived": 0
+        }
+      ],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": "vle_equilibrium_point;co2_vol_pct_derived_from_stated_total_pressure_180kPa;initial_loading_fresh_unloaded_solution",
+        "raw_data_path": "extractions/20261027_08/raw/shen1992_tableII_V_snapshot.json",
+        "raw_data_hash": "6e53610792242d73d8c36871eb0155d80bddb1701da6a216a7f241a3660b9846"
+      }
+    },
+    {
+      "test_id": 34,
+      "batch_id": "20261027_08",
+      "source": {
+        "doi": "10.1021/je00005a025",
+        "title": "Solubility of Carbon Dioxide in Aqueous Mixtures of Monoethanolamine with Methyldiethanolamine",
+        "authors": "Shen K.-P.; Li M.-H.",
+        "year": 1992,
+        "journal": "Journal of Chemical and Engineering Data",
+        "pdf_path": "data/raw_pdfs/10.1021_je00005a025_0770ae31.pdf",
+        "pdf_hash": "8558972992c38f88872908bf43e90932bdfced7adaaba7f3d27f696810029cd7",
+        "loc_type": "table",
+        "loc_label": "p.98 Table II (Solubility of CO2 in 30 wt% MDEA Aqueous Solution) row 4"
+      },
+      "compound": {
+        "standard_name": "MDEA",
+        "inchikey": "CRVGTESFCCXCTH-UHFFFAOYSA-N",
+        "cas_no": "105-59-9",
+        "smiles": "CN(CCO)CCO",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "3a99b7ef2f0fd422bbab68f3f1e5bdf707c28a46",
+        "recipe_type": "mono",
+        "wt_a": 30.0,
+        "wt_b": null,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 15.56,
+        "co2_partial_kPa": 28.0,
+        "total_pressure_kPa": 180.0,
+        "gas_flow": null,
+        "liquid_volume": 0.5,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": 0.672,
+        "lean": null
+      },
+      "performance": [
+        {
+          "metric_name": "equilibrium_loading",
+          "value": 0.672,
+          "unit": "mol_CO2/mol_amine",
+          "value_original": 0.672,
+          "unit_original": "mol CO2/mol amine",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "VLE equilibrium CO2 solubility in 30 wt% aqueous MDEA at 313.15 K and P_CO2=28.0 kPa; Table II of Shen & Li 1992, titration analysis",
+          "is_derived": 0
+        }
+      ],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": "vle_equilibrium_point;co2_vol_pct_derived_from_stated_total_pressure_180kPa;initial_loading_fresh_unloaded_solution",
+        "raw_data_path": "extractions/20261027_08/raw/shen1992_tableII_V_snapshot.json",
+        "raw_data_hash": "6e53610792242d73d8c36871eb0155d80bddb1701da6a216a7f241a3660b9846"
+      }
+    },
+    {
+      "test_id": 35,
+      "batch_id": "20261027_08",
+      "source": {
+        "doi": "10.1021/je00005a025",
+        "title": "Solubility of Carbon Dioxide in Aqueous Mixtures of Monoethanolamine with Methyldiethanolamine",
+        "authors": "Shen K.-P.; Li M.-H.",
+        "year": 1992,
+        "journal": "Journal of Chemical and Engineering Data",
+        "pdf_path": "data/raw_pdfs/10.1021_je00005a025_0770ae31.pdf",
+        "pdf_hash": "8558972992c38f88872908bf43e90932bdfced7adaaba7f3d27f696810029cd7",
+        "loc_type": "table",
+        "loc_label": "p.98 Table II (Solubility of CO2 in 30 wt% MDEA Aqueous Solution) row 5"
+      },
+      "compound": {
+        "standard_name": "MDEA",
+        "inchikey": "CRVGTESFCCXCTH-UHFFFAOYSA-N",
+        "cas_no": "105-59-9",
+        "smiles": "CN(CCO)CCO",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "3a99b7ef2f0fd422bbab68f3f1e5bdf707c28a46",
+        "recipe_type": "mono",
+        "wt_a": 30.0,
+        "wt_b": null,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 40.44,
+        "co2_partial_kPa": 72.8,
+        "total_pressure_kPa": 180.0,
+        "gas_flow": null,
+        "liquid_volume": 0.5,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": 0.811,
+        "lean": null
+      },
+      "performance": [
+        {
+          "metric_name": "equilibrium_loading",
+          "value": 0.811,
+          "unit": "mol_CO2/mol_amine",
+          "value_original": 0.811,
+          "unit_original": "mol CO2/mol amine",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "VLE equilibrium CO2 solubility in 30 wt% aqueous MDEA at 313.15 K and P_CO2=72.8 kPa; Table II of Shen & Li 1992, titration analysis",
+          "is_derived": 0
+        }
+      ],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": "vle_equilibrium_point;co2_vol_pct_derived_from_stated_total_pressure_180kPa;initial_loading_fresh_unloaded_solution",
+        "raw_data_path": "extractions/20261027_08/raw/shen1992_tableII_V_snapshot.json",
+        "raw_data_hash": "6e53610792242d73d8c36871eb0155d80bddb1701da6a216a7f241a3660b9846"
+      }
+    },
+    {
+      "test_id": 36,
+      "batch_id": "20261027_08",
+      "source": {
+        "doi": "10.1021/je00005a025",
+        "title": "Solubility of Carbon Dioxide in Aqueous Mixtures of Monoethanolamine with Methyldiethanolamine",
+        "authors": "Shen K.-P.; Li M.-H.",
+        "year": 1992,
+        "journal": "Journal of Chemical and Engineering Data",
+        "pdf_path": "data/raw_pdfs/10.1021_je00005a025_0770ae31.pdf",
+        "pdf_hash": "8558972992c38f88872908bf43e90932bdfced7adaaba7f3d27f696810029cd7",
+        "loc_type": "table",
+        "loc_label": "p.98 Table II (Solubility of CO2 in 30 wt% MDEA Aqueous Solution) row 6"
+      },
+      "compound": {
+        "standard_name": "MDEA",
+        "inchikey": "CRVGTESFCCXCTH-UHFFFAOYSA-N",
+        "cas_no": "105-59-9",
+        "smiles": "CN(CCO)CCO",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "3a99b7ef2f0fd422bbab68f3f1e5bdf707c28a46",
+        "recipe_type": "mono",
+        "wt_a": 30.0,
+        "wt_b": null,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 77.94,
+        "co2_partial_kPa": 140.3,
+        "total_pressure_kPa": 180.0,
+        "gas_flow": null,
+        "liquid_volume": 0.5,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": 0.911,
+        "lean": null
+      },
+      "performance": [
+        {
+          "metric_name": "equilibrium_loading",
+          "value": 0.911,
+          "unit": "mol_CO2/mol_amine",
+          "value_original": 0.911,
+          "unit_original": "mol CO2/mol amine",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "VLE equilibrium CO2 solubility in 30 wt% aqueous MDEA at 313.15 K and P_CO2=140.3 kPa; Table II of Shen & Li 1992, titration analysis",
+          "is_derived": 0
+        }
+      ],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": "vle_equilibrium_point;co2_vol_pct_derived_from_stated_total_pressure_180kPa;initial_loading_fresh_unloaded_solution",
+        "raw_data_path": "extractions/20261027_08/raw/shen1992_tableII_V_snapshot.json",
+        "raw_data_hash": "6e53610792242d73d8c36871eb0155d80bddb1701da6a216a7f241a3660b9846"
+      }
+    },
+    {
+      "test_id": 37,
+      "batch_id": "20261027_08",
+      "source": {
+        "doi": "10.1021/je00005a025",
+        "title": "Solubility of Carbon Dioxide in Aqueous Mixtures of Monoethanolamine with Methyldiethanolamine",
+        "authors": "Shen K.-P.; Li M.-H.",
+        "year": 1992,
+        "journal": "Journal of Chemical and Engineering Data",
+        "pdf_path": "data/raw_pdfs/10.1021_je00005a025_0770ae31.pdf",
+        "pdf_hash": "8558972992c38f88872908bf43e90932bdfced7adaaba7f3d27f696810029cd7",
+        "loc_type": "table",
+        "loc_label": "p.98 Table III (Solubility of CO2 in 12 wt% MEA + 18 wt% MDEA Aqueous Solution) row 1"
+      },
+      "compound": {
+        "standard_name": "MEA",
+        "inchikey": "HZAXFHJVJLSVMW-UHFFFAOYSA-N",
+        "cas_no": "141-43-5",
+        "smiles": "NCCO",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "b50bbc2b0c638d72036baa4074797e1884c547e6",
+        "recipe_type": "binary",
+        "wt_a": 12.0,
+        "wt_b": 18.0,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 0.56,
+        "co2_partial_kPa": 1.0,
+        "total_pressure_kPa": 180.0,
+        "gas_flow": null,
+        "liquid_volume": 0.5,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": 0.357,
+        "lean": null
+      },
+      "performance": [
+        {
+          "metric_name": "equilibrium_loading",
+          "value": 0.357,
+          "unit": "mol_CO2/mol_amine",
+          "value_original": 0.357,
+          "unit_original": "mol CO2/mol amine",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "VLE equilibrium CO2 solubility in 30 wt% aqueous MEA+MDEA at 313.15 K and P_CO2=1.0 kPa; Table III of Shen & Li 1992, titration analysis",
+          "is_derived": 0
+        }
+      ],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": "vle_equilibrium_point;co2_vol_pct_derived_from_stated_total_pressure_180kPa;initial_loading_fresh_unloaded_solution",
+        "raw_data_path": "extractions/20261027_08/raw/shen1992_tableII_V_snapshot.json",
+        "raw_data_hash": "6e53610792242d73d8c36871eb0155d80bddb1701da6a216a7f241a3660b9846"
+      }
+    },
+    {
+      "test_id": 38,
+      "batch_id": "20261027_08",
+      "source": {
+        "doi": "10.1021/je00005a025",
+        "title": "Solubility of Carbon Dioxide in Aqueous Mixtures of Monoethanolamine with Methyldiethanolamine",
+        "authors": "Shen K.-P.; Li M.-H.",
+        "year": 1992,
+        "journal": "Journal of Chemical and Engineering Data",
+        "pdf_path": "data/raw_pdfs/10.1021_je00005a025_0770ae31.pdf",
+        "pdf_hash": "8558972992c38f88872908bf43e90932bdfced7adaaba7f3d27f696810029cd7",
+        "loc_type": "table",
+        "loc_label": "p.98 Table III (Solubility of CO2 in 12 wt% MEA + 18 wt% MDEA Aqueous Solution) row 2"
+      },
+      "compound": {
+        "standard_name": "MEA",
+        "inchikey": "HZAXFHJVJLSVMW-UHFFFAOYSA-N",
+        "cas_no": "141-43-5",
+        "smiles": "NCCO",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "b50bbc2b0c638d72036baa4074797e1884c547e6",
+        "recipe_type": "binary",
+        "wt_a": 12.0,
+        "wt_b": 18.0,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 2.06,
+        "co2_partial_kPa": 3.7,
+        "total_pressure_kPa": 180.0,
+        "gas_flow": null,
+        "liquid_volume": 0.5,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": 0.441,
+        "lean": null
+      },
+      "performance": [
+        {
+          "metric_name": "equilibrium_loading",
+          "value": 0.441,
+          "unit": "mol_CO2/mol_amine",
+          "value_original": 0.441,
+          "unit_original": "mol CO2/mol amine",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "VLE equilibrium CO2 solubility in 30 wt% aqueous MEA+MDEA at 313.15 K and P_CO2=3.7 kPa; Table III of Shen & Li 1992, titration analysis",
+          "is_derived": 0
+        }
+      ],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": "vle_equilibrium_point;co2_vol_pct_derived_from_stated_total_pressure_180kPa;initial_loading_fresh_unloaded_solution",
+        "raw_data_path": "extractions/20261027_08/raw/shen1992_tableII_V_snapshot.json",
+        "raw_data_hash": "6e53610792242d73d8c36871eb0155d80bddb1701da6a216a7f241a3660b9846"
+      }
+    },
+    {
+      "test_id": 39,
+      "batch_id": "20261027_08",
+      "source": {
+        "doi": "10.1021/je00005a025",
+        "title": "Solubility of Carbon Dioxide in Aqueous Mixtures of Monoethanolamine with Methyldiethanolamine",
+        "authors": "Shen K.-P.; Li M.-H.",
+        "year": 1992,
+        "journal": "Journal of Chemical and Engineering Data",
+        "pdf_path": "data/raw_pdfs/10.1021_je00005a025_0770ae31.pdf",
+        "pdf_hash": "8558972992c38f88872908bf43e90932bdfced7adaaba7f3d27f696810029cd7",
+        "loc_type": "table",
+        "loc_label": "p.98 Table III (Solubility of CO2 in 12 wt% MEA + 18 wt% MDEA Aqueous Solution) row 3"
+      },
+      "compound": {
+        "standard_name": "MEA",
+        "inchikey": "HZAXFHJVJLSVMW-UHFFFAOYSA-N",
+        "cas_no": "141-43-5",
+        "smiles": "NCCO",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "b50bbc2b0c638d72036baa4074797e1884c547e6",
+        "recipe_type": "binary",
+        "wt_a": 12.0,
+        "wt_b": 18.0,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 5.0,
+        "co2_partial_kPa": 9.0,
+        "total_pressure_kPa": 180.0,
+        "gas_flow": null,
+        "liquid_volume": 0.5,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": 0.488,
+        "lean": null
+      },
+      "performance": [
+        {
+          "metric_name": "equilibrium_loading",
+          "value": 0.488,
+          "unit": "mol_CO2/mol_amine",
+          "value_original": 0.488,
+          "unit_original": "mol CO2/mol amine",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "VLE equilibrium CO2 solubility in 30 wt% aqueous MEA+MDEA at 313.15 K and P_CO2=9.0 kPa; Table III of Shen & Li 1992, titration analysis",
+          "is_derived": 0
+        }
+      ],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": "vle_equilibrium_point;co2_vol_pct_derived_from_stated_total_pressure_180kPa;initial_loading_fresh_unloaded_solution",
+        "raw_data_path": "extractions/20261027_08/raw/shen1992_tableII_V_snapshot.json",
+        "raw_data_hash": "6e53610792242d73d8c36871eb0155d80bddb1701da6a216a7f241a3660b9846"
+      }
+    },
+    {
+      "test_id": 40,
+      "batch_id": "20261027_08",
+      "source": {
+        "doi": "10.1021/je00005a025",
+        "title": "Solubility of Carbon Dioxide in Aqueous Mixtures of Monoethanolamine with Methyldiethanolamine",
+        "authors": "Shen K.-P.; Li M.-H.",
+        "year": 1992,
+        "journal": "Journal of Chemical and Engineering Data",
+        "pdf_path": "data/raw_pdfs/10.1021_je00005a025_0770ae31.pdf",
+        "pdf_hash": "8558972992c38f88872908bf43e90932bdfced7adaaba7f3d27f696810029cd7",
+        "loc_type": "table",
+        "loc_label": "p.98 Table III (Solubility of CO2 in 12 wt% MEA + 18 wt% MDEA Aqueous Solution) row 4"
+      },
+      "compound": {
+        "standard_name": "MEA",
+        "inchikey": "HZAXFHJVJLSVMW-UHFFFAOYSA-N",
+        "cas_no": "141-43-5",
+        "smiles": "NCCO",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "b50bbc2b0c638d72036baa4074797e1884c547e6",
+        "recipe_type": "binary",
+        "wt_a": 12.0,
+        "wt_b": 18.0,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 9.67,
+        "co2_partial_kPa": 17.4,
+        "total_pressure_kPa": 180.0,
+        "gas_flow": null,
+        "liquid_volume": 0.5,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": 0.536,
+        "lean": null
+      },
+      "performance": [
+        {
+          "metric_name": "equilibrium_loading",
+          "value": 0.536,
+          "unit": "mol_CO2/mol_amine",
+          "value_original": 0.536,
+          "unit_original": "mol CO2/mol amine",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "VLE equilibrium CO2 solubility in 30 wt% aqueous MEA+MDEA at 313.15 K and P_CO2=17.4 kPa; Table III of Shen & Li 1992, titration analysis",
+          "is_derived": 0
+        }
+      ],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": "vle_equilibrium_point;co2_vol_pct_derived_from_stated_total_pressure_180kPa;initial_loading_fresh_unloaded_solution",
+        "raw_data_path": "extractions/20261027_08/raw/shen1992_tableII_V_snapshot.json",
+        "raw_data_hash": "6e53610792242d73d8c36871eb0155d80bddb1701da6a216a7f241a3660b9846"
+      }
+    },
+    {
+      "test_id": 41,
+      "batch_id": "20261027_08",
+      "source": {
+        "doi": "10.1021/je00005a025",
+        "title": "Solubility of Carbon Dioxide in Aqueous Mixtures of Monoethanolamine with Methyldiethanolamine",
+        "authors": "Shen K.-P.; Li M.-H.",
+        "year": 1992,
+        "journal": "Journal of Chemical and Engineering Data",
+        "pdf_path": "data/raw_pdfs/10.1021_je00005a025_0770ae31.pdf",
+        "pdf_hash": "8558972992c38f88872908bf43e90932bdfced7adaaba7f3d27f696810029cd7",
+        "loc_type": "table",
+        "loc_label": "p.98 Table III (Solubility of CO2 in 12 wt% MEA + 18 wt% MDEA Aqueous Solution) row 5"
+      },
+      "compound": {
+        "standard_name": "MEA",
+        "inchikey": "HZAXFHJVJLSVMW-UHFFFAOYSA-N",
+        "cas_no": "141-43-5",
+        "smiles": "NCCO",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "b50bbc2b0c638d72036baa4074797e1884c547e6",
+        "recipe_type": "binary",
+        "wt_a": 12.0,
+        "wt_b": 18.0,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 25.5,
+        "co2_partial_kPa": 45.9,
+        "total_pressure_kPa": 180.0,
+        "gas_flow": null,
+        "liquid_volume": 0.5,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": 0.608,
+        "lean": null
+      },
+      "performance": [
+        {
+          "metric_name": "equilibrium_loading",
+          "value": 0.608,
+          "unit": "mol_CO2/mol_amine",
+          "value_original": 0.608,
+          "unit_original": "mol CO2/mol amine",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "VLE equilibrium CO2 solubility in 30 wt% aqueous MEA+MDEA at 313.15 K and P_CO2=45.9 kPa; Table III of Shen & Li 1992, titration analysis",
+          "is_derived": 0
+        }
+      ],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": "vle_equilibrium_point;co2_vol_pct_derived_from_stated_total_pressure_180kPa;initial_loading_fresh_unloaded_solution",
+        "raw_data_path": "extractions/20261027_08/raw/shen1992_tableII_V_snapshot.json",
+        "raw_data_hash": "6e53610792242d73d8c36871eb0155d80bddb1701da6a216a7f241a3660b9846"
+      }
+    },
+    {
+      "test_id": 42,
+      "batch_id": "20261027_08",
+      "source": {
+        "doi": "10.1021/je00005a025",
+        "title": "Solubility of Carbon Dioxide in Aqueous Mixtures of Monoethanolamine with Methyldiethanolamine",
+        "authors": "Shen K.-P.; Li M.-H.",
+        "year": 1992,
+        "journal": "Journal of Chemical and Engineering Data",
+        "pdf_path": "data/raw_pdfs/10.1021_je00005a025_0770ae31.pdf",
+        "pdf_hash": "8558972992c38f88872908bf43e90932bdfced7adaaba7f3d27f696810029cd7",
+        "loc_type": "table",
+        "loc_label": "p.98 Table III (Solubility of CO2 in 12 wt% MEA + 18 wt% MDEA Aqueous Solution) row 6"
+      },
+      "compound": {
+        "standard_name": "MEA",
+        "inchikey": "HZAXFHJVJLSVMW-UHFFFAOYSA-N",
+        "cas_no": "141-43-5",
+        "smiles": "NCCO",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "b50bbc2b0c638d72036baa4074797e1884c547e6",
+        "recipe_type": "binary",
+        "wt_a": 12.0,
+        "wt_b": 18.0,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 59.67,
+        "co2_partial_kPa": 107.4,
+        "total_pressure_kPa": 180.0,
+        "gas_flow": null,
+        "liquid_volume": 0.5,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": 0.684,
+        "lean": null
+      },
+      "performance": [
+        {
+          "metric_name": "equilibrium_loading",
+          "value": 0.684,
+          "unit": "mol_CO2/mol_amine",
+          "value_original": 0.684,
+          "unit_original": "mol CO2/mol amine",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "VLE equilibrium CO2 solubility in 30 wt% aqueous MEA+MDEA at 313.15 K and P_CO2=107.4 kPa; Table III of Shen & Li 1992, titration analysis",
+          "is_derived": 0
+        }
+      ],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": "vle_equilibrium_point;co2_vol_pct_derived_from_stated_total_pressure_180kPa;initial_loading_fresh_unloaded_solution",
+        "raw_data_path": "extractions/20261027_08/raw/shen1992_tableII_V_snapshot.json",
+        "raw_data_hash": "6e53610792242d73d8c36871eb0155d80bddb1701da6a216a7f241a3660b9846"
+      }
+    },
+    {
+      "test_id": 43,
+      "batch_id": "20261027_08",
+      "source": {
+        "doi": "10.1021/je00005a025",
+        "title": "Solubility of Carbon Dioxide in Aqueous Mixtures of Monoethanolamine with Methyldiethanolamine",
+        "authors": "Shen K.-P.; Li M.-H.",
+        "year": 1992,
+        "journal": "Journal of Chemical and Engineering Data",
+        "pdf_path": "data/raw_pdfs/10.1021_je00005a025_0770ae31.pdf",
+        "pdf_hash": "8558972992c38f88872908bf43e90932bdfced7adaaba7f3d27f696810029cd7",
+        "loc_type": "table",
+        "loc_label": "p.98 Table III (Solubility of CO2 in 12 wt% MEA + 18 wt% MDEA Aqueous Solution) row 7"
+      },
+      "compound": {
+        "standard_name": "MEA",
+        "inchikey": "HZAXFHJVJLSVMW-UHFFFAOYSA-N",
+        "cas_no": "141-43-5",
+        "smiles": "NCCO",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "b50bbc2b0c638d72036baa4074797e1884c547e6",
+        "recipe_type": "binary",
+        "wt_a": 12.0,
+        "wt_b": 18.0,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 87.5,
+        "co2_partial_kPa": 157.5,
+        "total_pressure_kPa": 180.0,
+        "gas_flow": null,
+        "liquid_volume": 0.5,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": 0.71,
+        "lean": null
+      },
+      "performance": [
+        {
+          "metric_name": "equilibrium_loading",
+          "value": 0.71,
+          "unit": "mol_CO2/mol_amine",
+          "value_original": 0.71,
+          "unit_original": "mol CO2/mol amine",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "VLE equilibrium CO2 solubility in 30 wt% aqueous MEA+MDEA at 313.15 K and P_CO2=157.5 kPa; Table III of Shen & Li 1992, titration analysis",
+          "is_derived": 0
+        }
+      ],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": "vle_equilibrium_point;co2_vol_pct_derived_from_stated_total_pressure_180kPa;initial_loading_fresh_unloaded_solution",
+        "raw_data_path": "extractions/20261027_08/raw/shen1992_tableII_V_snapshot.json",
+        "raw_data_hash": "6e53610792242d73d8c36871eb0155d80bddb1701da6a216a7f241a3660b9846"
+      }
+    },
+    {
+      "test_id": 44,
+      "batch_id": "20261027_08",
+      "source": {
+        "doi": "10.1021/je00005a025",
+        "title": "Solubility of Carbon Dioxide in Aqueous Mixtures of Monoethanolamine with Methyldiethanolamine",
+        "authors": "Shen K.-P.; Li M.-H.",
+        "year": 1992,
+        "journal": "Journal of Chemical and Engineering Data",
+        "pdf_path": "data/raw_pdfs/10.1021_je00005a025_0770ae31.pdf",
+        "pdf_hash": "8558972992c38f88872908bf43e90932bdfced7adaaba7f3d27f696810029cd7",
+        "loc_type": "table",
+        "loc_label": "p.99 Table IV (Solubility of CO2 in 24 wt% MEA + 6 wt% MDEA Aqueous Solution) row 1"
+      },
+      "compound": {
+        "standard_name": "MEA",
+        "inchikey": "HZAXFHJVJLSVMW-UHFFFAOYSA-N",
+        "cas_no": "141-43-5",
+        "smiles": "NCCO",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "b2254ec92f5e6038810dba0b641d55f65825bc4e",
+        "recipe_type": "binary",
+        "wt_a": 24.0,
+        "wt_b": 6.0,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 1.61,
+        "co2_partial_kPa": 2.9,
+        "total_pressure_kPa": 180.0,
+        "gas_flow": null,
+        "liquid_volume": 0.5,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": 0.473,
+        "lean": null
+      },
+      "performance": [
+        {
+          "metric_name": "equilibrium_loading",
+          "value": 0.473,
+          "unit": "mol_CO2/mol_amine",
+          "value_original": 0.473,
+          "unit_original": "mol CO2/mol amine",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "VLE equilibrium CO2 solubility in 30 wt% aqueous MEA+MDEA at 313.15 K and P_CO2=2.9 kPa; Table IV of Shen & Li 1992, titration analysis",
+          "is_derived": 0
+        }
+      ],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": "vle_equilibrium_point;co2_vol_pct_derived_from_stated_total_pressure_180kPa;initial_loading_fresh_unloaded_solution",
+        "raw_data_path": "extractions/20261027_08/raw/shen1992_tableII_V_snapshot.json",
+        "raw_data_hash": "6e53610792242d73d8c36871eb0155d80bddb1701da6a216a7f241a3660b9846"
+      }
+    },
+    {
+      "test_id": 45,
+      "batch_id": "20261027_08",
+      "source": {
+        "doi": "10.1021/je00005a025",
+        "title": "Solubility of Carbon Dioxide in Aqueous Mixtures of Monoethanolamine with Methyldiethanolamine",
+        "authors": "Shen K.-P.; Li M.-H.",
+        "year": 1992,
+        "journal": "Journal of Chemical and Engineering Data",
+        "pdf_path": "data/raw_pdfs/10.1021_je00005a025_0770ae31.pdf",
+        "pdf_hash": "8558972992c38f88872908bf43e90932bdfced7adaaba7f3d27f696810029cd7",
+        "loc_type": "table",
+        "loc_label": "p.99 Table IV (Solubility of CO2 in 24 wt% MEA + 6 wt% MDEA Aqueous Solution) row 2"
+      },
+      "compound": {
+        "standard_name": "MEA",
+        "inchikey": "HZAXFHJVJLSVMW-UHFFFAOYSA-N",
+        "cas_no": "141-43-5",
+        "smiles": "NCCO",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "b2254ec92f5e6038810dba0b641d55f65825bc4e",
+        "recipe_type": "binary",
+        "wt_a": 24.0,
+        "wt_b": 6.0,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 3.67,
+        "co2_partial_kPa": 6.6,
+        "total_pressure_kPa": 180.0,
+        "gas_flow": null,
+        "liquid_volume": 0.5,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": 0.5,
+        "lean": null
+      },
+      "performance": [
+        {
+          "metric_name": "equilibrium_loading",
+          "value": 0.5,
+          "unit": "mol_CO2/mol_amine",
+          "value_original": 0.5,
+          "unit_original": "mol CO2/mol amine",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "VLE equilibrium CO2 solubility in 30 wt% aqueous MEA+MDEA at 313.15 K and P_CO2=6.6 kPa; Table IV of Shen & Li 1992, titration analysis",
+          "is_derived": 0
+        }
+      ],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": "vle_equilibrium_point;co2_vol_pct_derived_from_stated_total_pressure_180kPa;initial_loading_fresh_unloaded_solution",
+        "raw_data_path": "extractions/20261027_08/raw/shen1992_tableII_V_snapshot.json",
+        "raw_data_hash": "6e53610792242d73d8c36871eb0155d80bddb1701da6a216a7f241a3660b9846"
+      }
+    },
+    {
+      "test_id": 46,
+      "batch_id": "20261027_08",
+      "source": {
+        "doi": "10.1021/je00005a025",
+        "title": "Solubility of Carbon Dioxide in Aqueous Mixtures of Monoethanolamine with Methyldiethanolamine",
+        "authors": "Shen K.-P.; Li M.-H.",
+        "year": 1992,
+        "journal": "Journal of Chemical and Engineering Data",
+        "pdf_path": "data/raw_pdfs/10.1021_je00005a025_0770ae31.pdf",
+        "pdf_hash": "8558972992c38f88872908bf43e90932bdfced7adaaba7f3d27f696810029cd7",
+        "loc_type": "table",
+        "loc_label": "p.99 Table IV (Solubility of CO2 in 24 wt% MEA + 6 wt% MDEA Aqueous Solution) row 3"
+      },
+      "compound": {
+        "standard_name": "MEA",
+        "inchikey": "HZAXFHJVJLSVMW-UHFFFAOYSA-N",
+        "cas_no": "141-43-5",
+        "smiles": "NCCO",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "b2254ec92f5e6038810dba0b641d55f65825bc4e",
+        "recipe_type": "binary",
+        "wt_a": 24.0,
+        "wt_b": 6.0,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 6.44,
+        "co2_partial_kPa": 11.6,
+        "total_pressure_kPa": 180.0,
+        "gas_flow": null,
+        "liquid_volume": 0.5,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": 0.51,
+        "lean": null
+      },
+      "performance": [
+        {
+          "metric_name": "equilibrium_loading",
+          "value": 0.51,
+          "unit": "mol_CO2/mol_amine",
+          "value_original": 0.51,
+          "unit_original": "mol CO2/mol amine",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "VLE equilibrium CO2 solubility in 30 wt% aqueous MEA+MDEA at 313.15 K and P_CO2=11.6 kPa; Table IV of Shen & Li 1992, titration analysis",
+          "is_derived": 0
+        }
+      ],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": "vle_equilibrium_point;co2_vol_pct_derived_from_stated_total_pressure_180kPa;initial_loading_fresh_unloaded_solution",
+        "raw_data_path": "extractions/20261027_08/raw/shen1992_tableII_V_snapshot.json",
+        "raw_data_hash": "6e53610792242d73d8c36871eb0155d80bddb1701da6a216a7f241a3660b9846"
+      }
+    },
+    {
+      "test_id": 47,
+      "batch_id": "20261027_08",
+      "source": {
+        "doi": "10.1021/je00005a025",
+        "title": "Solubility of Carbon Dioxide in Aqueous Mixtures of Monoethanolamine with Methyldiethanolamine",
+        "authors": "Shen K.-P.; Li M.-H.",
+        "year": 1992,
+        "journal": "Journal of Chemical and Engineering Data",
+        "pdf_path": "data/raw_pdfs/10.1021_je00005a025_0770ae31.pdf",
+        "pdf_hash": "8558972992c38f88872908bf43e90932bdfced7adaaba7f3d27f696810029cd7",
+        "loc_type": "table",
+        "loc_label": "p.99 Table IV (Solubility of CO2 in 24 wt% MEA + 6 wt% MDEA Aqueous Solution) row 4"
+      },
+      "compound": {
+        "standard_name": "MEA",
+        "inchikey": "HZAXFHJVJLSVMW-UHFFFAOYSA-N",
+        "cas_no": "141-43-5",
+        "smiles": "NCCO",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "b2254ec92f5e6038810dba0b641d55f65825bc4e",
+        "recipe_type": "binary",
+        "wt_a": 24.0,
+        "wt_b": 6.0,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 16.33,
+        "co2_partial_kPa": 29.4,
+        "total_pressure_kPa": 180.0,
+        "gas_flow": null,
+        "liquid_volume": 0.5,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": 0.549,
+        "lean": null
+      },
+      "performance": [
+        {
+          "metric_name": "equilibrium_loading",
+          "value": 0.549,
+          "unit": "mol_CO2/mol_amine",
+          "value_original": 0.549,
+          "unit_original": "mol CO2/mol amine",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "VLE equilibrium CO2 solubility in 30 wt% aqueous MEA+MDEA at 313.15 K and P_CO2=29.4 kPa; Table IV of Shen & Li 1992, titration analysis",
+          "is_derived": 0
+        }
+      ],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": "vle_equilibrium_point;co2_vol_pct_derived_from_stated_total_pressure_180kPa;initial_loading_fresh_unloaded_solution",
+        "raw_data_path": "extractions/20261027_08/raw/shen1992_tableII_V_snapshot.json",
+        "raw_data_hash": "6e53610792242d73d8c36871eb0155d80bddb1701da6a216a7f241a3660b9846"
+      }
+    },
+    {
+      "test_id": 48,
+      "batch_id": "20261027_08",
+      "source": {
+        "doi": "10.1021/je00005a025",
+        "title": "Solubility of Carbon Dioxide in Aqueous Mixtures of Monoethanolamine with Methyldiethanolamine",
+        "authors": "Shen K.-P.; Li M.-H.",
+        "year": 1992,
+        "journal": "Journal of Chemical and Engineering Data",
+        "pdf_path": "data/raw_pdfs/10.1021_je00005a025_0770ae31.pdf",
+        "pdf_hash": "8558972992c38f88872908bf43e90932bdfced7adaaba7f3d27f696810029cd7",
+        "loc_type": "table",
+        "loc_label": "p.99 Table IV (Solubility of CO2 in 24 wt% MEA + 6 wt% MDEA Aqueous Solution) row 5"
+      },
+      "compound": {
+        "standard_name": "MEA",
+        "inchikey": "HZAXFHJVJLSVMW-UHFFFAOYSA-N",
+        "cas_no": "141-43-5",
+        "smiles": "NCCO",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "b2254ec92f5e6038810dba0b641d55f65825bc4e",
+        "recipe_type": "binary",
+        "wt_a": 24.0,
+        "wt_b": 6.0,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 29.11,
+        "co2_partial_kPa": 52.4,
+        "total_pressure_kPa": 180.0,
+        "gas_flow": null,
+        "liquid_volume": 0.5,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": 0.584,
+        "lean": null
+      },
+      "performance": [
+        {
+          "metric_name": "equilibrium_loading",
+          "value": 0.584,
+          "unit": "mol_CO2/mol_amine",
+          "value_original": 0.584,
+          "unit_original": "mol CO2/mol amine",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "VLE equilibrium CO2 solubility in 30 wt% aqueous MEA+MDEA at 313.15 K and P_CO2=52.4 kPa; Table IV of Shen & Li 1992, titration analysis",
+          "is_derived": 0
+        }
+      ],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": "vle_equilibrium_point;co2_vol_pct_derived_from_stated_total_pressure_180kPa;initial_loading_fresh_unloaded_solution",
+        "raw_data_path": "extractions/20261027_08/raw/shen1992_tableII_V_snapshot.json",
+        "raw_data_hash": "6e53610792242d73d8c36871eb0155d80bddb1701da6a216a7f241a3660b9846"
+      }
+    },
+    {
+      "test_id": 49,
+      "batch_id": "20261027_08",
+      "source": {
+        "doi": "10.1021/je00005a025",
+        "title": "Solubility of Carbon Dioxide in Aqueous Mixtures of Monoethanolamine with Methyldiethanolamine",
+        "authors": "Shen K.-P.; Li M.-H.",
+        "year": 1992,
+        "journal": "Journal of Chemical and Engineering Data",
+        "pdf_path": "data/raw_pdfs/10.1021_je00005a025_0770ae31.pdf",
+        "pdf_hash": "8558972992c38f88872908bf43e90932bdfced7adaaba7f3d27f696810029cd7",
+        "loc_type": "table",
+        "loc_label": "p.99 Table IV (Solubility of CO2 in 24 wt% MEA + 6 wt% MDEA Aqueous Solution) row 6"
+      },
+      "compound": {
+        "standard_name": "MEA",
+        "inchikey": "HZAXFHJVJLSVMW-UHFFFAOYSA-N",
+        "cas_no": "141-43-5",
+        "smiles": "NCCO",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "b2254ec92f5e6038810dba0b641d55f65825bc4e",
+        "recipe_type": "binary",
+        "wt_a": 24.0,
+        "wt_b": 6.0,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 45.67,
+        "co2_partial_kPa": 82.2,
+        "total_pressure_kPa": 180.0,
+        "gas_flow": null,
+        "liquid_volume": 0.5,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": 0.612,
+        "lean": null
+      },
+      "performance": [
+        {
+          "metric_name": "equilibrium_loading",
+          "value": 0.612,
+          "unit": "mol_CO2/mol_amine",
+          "value_original": 0.612,
+          "unit_original": "mol CO2/mol amine",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "VLE equilibrium CO2 solubility in 30 wt% aqueous MEA+MDEA at 313.15 K and P_CO2=82.2 kPa; Table IV of Shen & Li 1992, titration analysis",
+          "is_derived": 0
+        }
+      ],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": "vle_equilibrium_point;co2_vol_pct_derived_from_stated_total_pressure_180kPa;initial_loading_fresh_unloaded_solution",
+        "raw_data_path": "extractions/20261027_08/raw/shen1992_tableII_V_snapshot.json",
+        "raw_data_hash": "6e53610792242d73d8c36871eb0155d80bddb1701da6a216a7f241a3660b9846"
+      }
+    },
+    {
+      "test_id": 50,
+      "batch_id": "20261027_08",
+      "source": {
+        "doi": "10.1021/je00005a025",
+        "title": "Solubility of Carbon Dioxide in Aqueous Mixtures of Monoethanolamine with Methyldiethanolamine",
+        "authors": "Shen K.-P.; Li M.-H.",
+        "year": 1992,
+        "journal": "Journal of Chemical and Engineering Data",
+        "pdf_path": "data/raw_pdfs/10.1021_je00005a025_0770ae31.pdf",
+        "pdf_hash": "8558972992c38f88872908bf43e90932bdfced7adaaba7f3d27f696810029cd7",
+        "loc_type": "table",
+        "loc_label": "p.99 Table IV (Solubility of CO2 in 24 wt% MEA + 6 wt% MDEA Aqueous Solution) row 7"
+      },
+      "compound": {
+        "standard_name": "MEA",
+        "inchikey": "HZAXFHJVJLSVMW-UHFFFAOYSA-N",
+        "cas_no": "141-43-5",
+        "smiles": "NCCO",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "b2254ec92f5e6038810dba0b641d55f65825bc4e",
+        "recipe_type": "binary",
+        "wt_a": 24.0,
+        "wt_b": 6.0,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 73.44,
+        "co2_partial_kPa": 132.2,
+        "total_pressure_kPa": 180.0,
+        "gas_flow": null,
+        "liquid_volume": 0.5,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": 0.637,
+        "lean": null
+      },
+      "performance": [
+        {
+          "metric_name": "equilibrium_loading",
+          "value": 0.637,
+          "unit": "mol_CO2/mol_amine",
+          "value_original": 0.637,
+          "unit_original": "mol CO2/mol amine",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "VLE equilibrium CO2 solubility in 30 wt% aqueous MEA+MDEA at 313.15 K and P_CO2=132.2 kPa; Table IV of Shen & Li 1992, titration analysis",
+          "is_derived": 0
+        }
+      ],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": "vle_equilibrium_point;co2_vol_pct_derived_from_stated_total_pressure_180kPa;initial_loading_fresh_unloaded_solution",
+        "raw_data_path": "extractions/20261027_08/raw/shen1992_tableII_V_snapshot.json",
+        "raw_data_hash": "6e53610792242d73d8c36871eb0155d80bddb1701da6a216a7f241a3660b9846"
+      }
+    },
+    {
+      "test_id": 51,
+      "batch_id": "20261027_08",
+      "source": {
+        "doi": "10.1021/je00005a025",
+        "title": "Solubility of Carbon Dioxide in Aqueous Mixtures of Monoethanolamine with Methyldiethanolamine",
+        "authors": "Shen K.-P.; Li M.-H.",
+        "year": 1992,
+        "journal": "Journal of Chemical and Engineering Data",
+        "pdf_path": "data/raw_pdfs/10.1021_je00005a025_0770ae31.pdf",
+        "pdf_hash": "8558972992c38f88872908bf43e90932bdfced7adaaba7f3d27f696810029cd7",
+        "loc_type": "table",
+        "loc_label": "p.99 Table V (Solubility of CO2 in 30 wt% MEA Aqueous Solution) row 1"
+      },
+      "compound": {
+        "standard_name": "MEA",
+        "inchikey": "HZAXFHJVJLSVMW-UHFFFAOYSA-N",
+        "cas_no": "141-43-5",
+        "smiles": "NCCO",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "8e425b36e7ff9627cfd455e624cde0e9aac0eaf7",
+        "recipe_type": "mono",
+        "wt_a": 30.0,
+        "wt_b": null,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 1.22,
+        "co2_partial_kPa": 2.2,
+        "total_pressure_kPa": 180.0,
+        "gas_flow": null,
+        "liquid_volume": 0.5,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": 0.471,
+        "lean": null
+      },
+      "performance": [
+        {
+          "metric_name": "equilibrium_loading",
+          "value": 0.471,
+          "unit": "mol_CO2/mol_amine",
+          "value_original": 0.471,
+          "unit_original": "mol CO2/mol amine",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "VLE equilibrium CO2 solubility in 30 wt% aqueous MEA at 313.15 K and P_CO2=2.2 kPa; Table V of Shen & Li 1992, titration analysis",
+          "is_derived": 0
+        }
+      ],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": "vle_equilibrium_point;co2_vol_pct_derived_from_stated_total_pressure_180kPa;initial_loading_fresh_unloaded_solution",
+        "raw_data_path": "extractions/20261027_08/raw/shen1992_tableII_V_snapshot.json",
+        "raw_data_hash": "6e53610792242d73d8c36871eb0155d80bddb1701da6a216a7f241a3660b9846"
+      }
+    },
+    {
+      "test_id": 52,
+      "batch_id": "20261027_08",
+      "source": {
+        "doi": "10.1021/je00005a025",
+        "title": "Solubility of Carbon Dioxide in Aqueous Mixtures of Monoethanolamine with Methyldiethanolamine",
+        "authors": "Shen K.-P.; Li M.-H.",
+        "year": 1992,
+        "journal": "Journal of Chemical and Engineering Data",
+        "pdf_path": "data/raw_pdfs/10.1021_je00005a025_0770ae31.pdf",
+        "pdf_hash": "8558972992c38f88872908bf43e90932bdfced7adaaba7f3d27f696810029cd7",
+        "loc_type": "table",
+        "loc_label": "p.99 Table V (Solubility of CO2 in 30 wt% MEA Aqueous Solution) row 2"
+      },
+      "compound": {
+        "standard_name": "MEA",
+        "inchikey": "HZAXFHJVJLSVMW-UHFFFAOYSA-N",
+        "cas_no": "141-43-5",
+        "smiles": "NCCO",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "8e425b36e7ff9627cfd455e624cde0e9aac0eaf7",
+        "recipe_type": "mono",
+        "wt_a": 30.0,
+        "wt_b": null,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 2.78,
+        "co2_partial_kPa": 5.0,
+        "total_pressure_kPa": 180.0,
+        "gas_flow": null,
+        "liquid_volume": 0.5,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": 0.496,
+        "lean": null
+      },
+      "performance": [
+        {
+          "metric_name": "equilibrium_loading",
+          "value": 0.496,
+          "unit": "mol_CO2/mol_amine",
+          "value_original": 0.496,
+          "unit_original": "mol CO2/mol amine",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "VLE equilibrium CO2 solubility in 30 wt% aqueous MEA at 313.15 K and P_CO2=5.0 kPa; Table V of Shen & Li 1992, titration analysis",
+          "is_derived": 0
+        }
+      ],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": "vle_equilibrium_point;co2_vol_pct_derived_from_stated_total_pressure_180kPa;initial_loading_fresh_unloaded_solution",
+        "raw_data_path": "extractions/20261027_08/raw/shen1992_tableII_V_snapshot.json",
+        "raw_data_hash": "6e53610792242d73d8c36871eb0155d80bddb1701da6a216a7f241a3660b9846"
+      }
+    },
+    {
+      "test_id": 53,
+      "batch_id": "20261027_08",
+      "source": {
+        "doi": "10.1021/je00005a025",
+        "title": "Solubility of Carbon Dioxide in Aqueous Mixtures of Monoethanolamine with Methyldiethanolamine",
+        "authors": "Shen K.-P.; Li M.-H.",
+        "year": 1992,
+        "journal": "Journal of Chemical and Engineering Data",
+        "pdf_path": "data/raw_pdfs/10.1021_je00005a025_0770ae31.pdf",
+        "pdf_hash": "8558972992c38f88872908bf43e90932bdfced7adaaba7f3d27f696810029cd7",
+        "loc_type": "table",
+        "loc_label": "p.99 Table V (Solubility of CO2 in 30 wt% MEA Aqueous Solution) row 3"
+      },
+      "compound": {
+        "standard_name": "MEA",
+        "inchikey": "HZAXFHJVJLSVMW-UHFFFAOYSA-N",
+        "cas_no": "141-43-5",
+        "smiles": "NCCO",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "8e425b36e7ff9627cfd455e624cde0e9aac0eaf7",
+        "recipe_type": "mono",
+        "wt_a": 30.0,
+        "wt_b": null,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 7.11,
+        "co2_partial_kPa": 12.8,
+        "total_pressure_kPa": 180.0,
+        "gas_flow": null,
+        "liquid_volume": 0.5,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": 0.512,
+        "lean": null
+      },
+      "performance": [
+        {
+          "metric_name": "equilibrium_loading",
+          "value": 0.512,
+          "unit": "mol_CO2/mol_amine",
+          "value_original": 0.512,
+          "unit_original": "mol CO2/mol amine",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "VLE equilibrium CO2 solubility in 30 wt% aqueous MEA at 313.15 K and P_CO2=12.8 kPa; Table V of Shen & Li 1992, titration analysis",
+          "is_derived": 0
+        }
+      ],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": "vle_equilibrium_point;co2_vol_pct_derived_from_stated_total_pressure_180kPa;initial_loading_fresh_unloaded_solution",
+        "raw_data_path": "extractions/20261027_08/raw/shen1992_tableII_V_snapshot.json",
+        "raw_data_hash": "6e53610792242d73d8c36871eb0155d80bddb1701da6a216a7f241a3660b9846"
+      }
+    },
+    {
+      "test_id": 54,
+      "batch_id": "20261027_08",
+      "source": {
+        "doi": "10.1021/je00005a025",
+        "title": "Solubility of Carbon Dioxide in Aqueous Mixtures of Monoethanolamine with Methyldiethanolamine",
+        "authors": "Shen K.-P.; Li M.-H.",
+        "year": 1992,
+        "journal": "Journal of Chemical and Engineering Data",
+        "pdf_path": "data/raw_pdfs/10.1021_je00005a025_0770ae31.pdf",
+        "pdf_hash": "8558972992c38f88872908bf43e90932bdfced7adaaba7f3d27f696810029cd7",
+        "loc_type": "table",
+        "loc_label": "p.99 Table V (Solubility of CO2 in 30 wt% MEA Aqueous Solution) row 4"
+      },
+      "compound": {
+        "standard_name": "MEA",
+        "inchikey": "HZAXFHJVJLSVMW-UHFFFAOYSA-N",
+        "cas_no": "141-43-5",
+        "smiles": "NCCO",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "8e425b36e7ff9627cfd455e624cde0e9aac0eaf7",
+        "recipe_type": "mono",
+        "wt_a": 30.0,
+        "wt_b": null,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 15.94,
+        "co2_partial_kPa": 28.7,
+        "total_pressure_kPa": 180.0,
+        "gas_flow": null,
+        "liquid_volume": 0.5,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": 0.538,
+        "lean": null
+      },
+      "performance": [
+        {
+          "metric_name": "equilibrium_loading",
+          "value": 0.538,
+          "unit": "mol_CO2/mol_amine",
+          "value_original": 0.538,
+          "unit_original": "mol CO2/mol amine",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "VLE equilibrium CO2 solubility in 30 wt% aqueous MEA at 313.15 K and P_CO2=28.7 kPa; Table V of Shen & Li 1992, titration analysis",
+          "is_derived": 0
+        }
+      ],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": "vle_equilibrium_point;co2_vol_pct_derived_from_stated_total_pressure_180kPa;initial_loading_fresh_unloaded_solution",
+        "raw_data_path": "extractions/20261027_08/raw/shen1992_tableII_V_snapshot.json",
+        "raw_data_hash": "6e53610792242d73d8c36871eb0155d80bddb1701da6a216a7f241a3660b9846"
+      }
+    },
+    {
+      "test_id": 55,
+      "batch_id": "20261027_08",
+      "source": {
+        "doi": "10.1021/je00005a025",
+        "title": "Solubility of Carbon Dioxide in Aqueous Mixtures of Monoethanolamine with Methyldiethanolamine",
+        "authors": "Shen K.-P.; Li M.-H.",
+        "year": 1992,
+        "journal": "Journal of Chemical and Engineering Data",
+        "pdf_path": "data/raw_pdfs/10.1021_je00005a025_0770ae31.pdf",
+        "pdf_hash": "8558972992c38f88872908bf43e90932bdfced7adaaba7f3d27f696810029cd7",
+        "loc_type": "table",
+        "loc_label": "p.99 Table V (Solubility of CO2 in 30 wt% MEA Aqueous Solution) row 5"
+      },
+      "compound": {
+        "standard_name": "MEA",
+        "inchikey": "HZAXFHJVJLSVMW-UHFFFAOYSA-N",
+        "cas_no": "141-43-5",
+        "smiles": "NCCO",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "8e425b36e7ff9627cfd455e624cde0e9aac0eaf7",
+        "recipe_type": "mono",
+        "wt_a": 30.0,
+        "wt_b": null,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 32.44,
+        "co2_partial_kPa": 58.4,
+        "total_pressure_kPa": 180.0,
+        "gas_flow": null,
+        "liquid_volume": 0.5,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": 0.57,
+        "lean": null
+      },
+      "performance": [
+        {
+          "metric_name": "equilibrium_loading",
+          "value": 0.57,
+          "unit": "mol_CO2/mol_amine",
+          "value_original": 0.57,
+          "unit_original": "mol CO2/mol amine",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "VLE equilibrium CO2 solubility in 30 wt% aqueous MEA at 313.15 K and P_CO2=58.4 kPa; Table V of Shen & Li 1992, titration analysis",
+          "is_derived": 0
+        }
+      ],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": "vle_equilibrium_point;co2_vol_pct_derived_from_stated_total_pressure_180kPa;initial_loading_fresh_unloaded_solution",
+        "raw_data_path": "extractions/20261027_08/raw/shen1992_tableII_V_snapshot.json",
+        "raw_data_hash": "6e53610792242d73d8c36871eb0155d80bddb1701da6a216a7f241a3660b9846"
+      }
+    },
+    {
+      "test_id": 56,
+      "batch_id": "20261027_08",
+      "source": {
+        "doi": "10.1021/je00005a025",
+        "title": "Solubility of Carbon Dioxide in Aqueous Mixtures of Monoethanolamine with Methyldiethanolamine",
+        "authors": "Shen K.-P.; Li M.-H.",
+        "year": 1992,
+        "journal": "Journal of Chemical and Engineering Data",
+        "pdf_path": "data/raw_pdfs/10.1021_je00005a025_0770ae31.pdf",
+        "pdf_hash": "8558972992c38f88872908bf43e90932bdfced7adaaba7f3d27f696810029cd7",
+        "loc_type": "table",
+        "loc_label": "p.99 Table V (Solubility of CO2 in 30 wt% MEA Aqueous Solution) row 6"
+      },
+      "compound": {
+        "standard_name": "MEA",
+        "inchikey": "HZAXFHJVJLSVMW-UHFFFAOYSA-N",
+        "cas_no": "141-43-5",
+        "smiles": "NCCO",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "8e425b36e7ff9627cfd455e624cde0e9aac0eaf7",
+        "recipe_type": "mono",
+        "wt_a": 30.0,
+        "wt_b": null,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 56.28,
+        "co2_partial_kPa": 101.3,
+        "total_pressure_kPa": 180.0,
+        "gas_flow": null,
+        "liquid_volume": 0.5,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": 0.594,
+        "lean": null
+      },
+      "performance": [
+        {
+          "metric_name": "equilibrium_loading",
+          "value": 0.594,
+          "unit": "mol_CO2/mol_amine",
+          "value_original": 0.594,
+          "unit_original": "mol CO2/mol amine",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "VLE equilibrium CO2 solubility in 30 wt% aqueous MEA at 313.15 K and P_CO2=101.3 kPa; Table V of Shen & Li 1992, titration analysis",
+          "is_derived": 0
+        }
+      ],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": "vle_equilibrium_point;co2_vol_pct_derived_from_stated_total_pressure_180kPa;initial_loading_fresh_unloaded_solution",
+        "raw_data_path": "extractions/20261027_08/raw/shen1992_tableII_V_snapshot.json",
+        "raw_data_hash": "6e53610792242d73d8c36871eb0155d80bddb1701da6a216a7f241a3660b9846"
+      }
+    },
+    {
+      "test_id": 57,
+      "batch_id": "20261027_08",
+      "source": {
+        "doi": "10.1021/je00005a025",
+        "title": "Solubility of Carbon Dioxide in Aqueous Mixtures of Monoethanolamine with Methyldiethanolamine",
+        "authors": "Shen K.-P.; Li M.-H.",
+        "year": 1992,
+        "journal": "Journal of Chemical and Engineering Data",
+        "pdf_path": "data/raw_pdfs/10.1021_je00005a025_0770ae31.pdf",
+        "pdf_hash": "8558972992c38f88872908bf43e90932bdfced7adaaba7f3d27f696810029cd7",
+        "loc_type": "table",
+        "loc_label": "p.99 Table V (Solubility of CO2 in 30 wt% MEA Aqueous Solution) row 7"
+      },
+      "compound": {
+        "standard_name": "MEA",
+        "inchikey": "HZAXFHJVJLSVMW-UHFFFAOYSA-N",
+        "cas_no": "141-43-5",
+        "smiles": "NCCO",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "8e425b36e7ff9627cfd455e624cde0e9aac0eaf7",
+        "recipe_type": "mono",
+        "wt_a": 30.0,
+        "wt_b": null,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 77.83,
+        "co2_partial_kPa": 140.1,
+        "total_pressure_kPa": 180.0,
+        "gas_flow": null,
+        "liquid_volume": 0.5,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": 0.62,
+        "lean": null
+      },
+      "performance": [
+        {
+          "metric_name": "equilibrium_loading",
+          "value": 0.62,
+          "unit": "mol_CO2/mol_amine",
+          "value_original": 0.62,
+          "unit_original": "mol CO2/mol amine",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "VLE equilibrium CO2 solubility in 30 wt% aqueous MEA at 313.15 K and P_CO2=140.1 kPa; Table V of Shen & Li 1992, titration analysis",
+          "is_derived": 0
+        }
+      ],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": "vle_equilibrium_point;co2_vol_pct_derived_from_stated_total_pressure_180kPa;initial_loading_fresh_unloaded_solution",
+        "raw_data_path": "extractions/20261027_08/raw/shen1992_tableII_V_snapshot.json",
+        "raw_data_hash": "6e53610792242d73d8c36871eb0155d80bddb1701da6a216a7f241a3660b9846"
+      }
+    },
+    {
+      "test_id": 58,
+      "batch_id": "20261027_08",
+      "source": {
+        "doi": "10.1016/j.ijggc.2016.12.018",
+        "title": "Screening of strong bicarbonate forming solvents for CO2 capture",
+        "authors": "Hartono A.; Vevelstad S.J.; Ciftja A.; Knuutila H.K.",
+        "year": 2017,
+        "journal": "International Journal of Greenhouse Gas Control",
+        "pdf_path": "data/raw_pdfs/10.1016_j.ijggc.2016.12.018_bbea5fb5.pdf",
+        "pdf_hash": "18795cf40a6d8159f09197d3854b2952637e90af075e568b53c1d56405b2356e",
+        "loc_type": "table",
+        "loc_label": "p.210 Table A1 (Verification for the screening procedure)"
+      },
+      "compound": {
+        "standard_name": "MEA",
+        "inchikey": "HZAXFHJVJLSVMW-UHFFFAOYSA-N",
+        "cas_no": "141-43-5",
+        "smiles": "NCCO",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "8e425b36e7ff9627cfd455e624cde0e9aac0eaf7",
+        "recipe_type": "mono",
+        "wt_a": 30.0,
+        "wt_b": null,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 10.0,
+        "co2_partial_kPa": 9.5,
+        "total_pressure_kPa": 101.325,
+        "gas_flow": 1.0,
+        "liquid_volume": null,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": 0.53,
+        "lean": 0.28
+      },
+      "performance": [
+        {
+          "metric_name": "cyclic_capacity",
+          "value": 0.25,
+          "unit": "mol_CO2/mol_amine",
+          "value_original": 0.25,
+          "unit_original": "mol CO2/mol MEA",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "rich (0.53, Eq.(5)) minus lean (0.28, Eq.(5)); 30 mass% MEA, absorption 40 C / 10 vol% CO2 to 95% capture, desorption 80 C to 90% removal",
+          "is_derived": 1
+        },
+        {
+          "metric_name": "regeneration_efficiency",
+          "value": 47.17,
+          "unit": "%",
+          "value_original": 47.17,
+          "unit_original": "%",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "(rich - lean)/rich x 100 = 0.25/0.53 x 100",
+          "is_derived": 1
+        }
+      ],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": "stop_criterion_95pct_capture_not_full_equilibrium",
+        "raw_data_path": "extractions/20261027_08/raw/hartono2017_tableA1_snapshot.json",
+        "raw_data_hash": "6ebdff85a63ba4ea6fe90903d160f8e91194bc6e24b3509c11f676d638f7dec4"
+      }
+    },
+    {
+      "test_id": 59,
+      "batch_id": "20261027_08",
+      "source": {
+        "doi": "10.1021/ie400825u",
+        "title": "CO2 Capture by Tertiary Amine Absorbents: A Performance Comparison Study",
+        "authors": "Chowdhury F.A.; Yamada H.; Higashii T.; Goto K.; Onoda M.",
+        "year": 2013,
+        "journal": "Industrial & Engineering Chemistry Research",
+        "pdf_path": "data/raw_pdfs/10.1021_ie400825u_3b39cbd9.pdf",
+        "pdf_hash": "f503005f8f4bf77ef9f63fcc13f2c90a422ce18ac0e11b0cde2fb355bdfff3b6",
+        "loc_type": "table",
+        "loc_label": "p.8328 Table 2 row 24 (MDEA)"
+      },
+      "compound": {
+        "standard_name": "MDEA",
+        "inchikey": "CRVGTESFCCXCTH-UHFFFAOYSA-N",
+        "cas_no": "105-59-9",
+        "smiles": "CN(CCO)CCO",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "3a99b7ef2f0fd422bbab68f3f1e5bdf707c28a46",
+        "recipe_type": "mono",
+        "wt_a": 30.0,
+        "wt_b": null,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 20.0,
+        "co2_partial_kPa": 20.26,
+        "total_pressure_kPa": 101.325,
+        "gas_flow": 700.0,
+        "liquid_volume": 0.05,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": null,
+        "lean": null
+      },
+      "performance": [
+        {
+          "metric_name": "absorption_rate_volumetric",
+          "value": 1.56,
+          "unit": "g_CO2/(L_soln*min)",
+          "value_original": 1.56,
+          "unit_original": "g-CO2/L-soln/min",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "slope of the CO2 loading curve at 50% of the 60 min loading, 40 C, 20 vol% CO2/80% N2 at 1 atm",
+          "is_derived": 1
+        },
+        {
+          "metric_name": "absorption_amount_volumetric",
+          "value": 55.0,
+          "unit": "g_CO2/L_soln",
+          "value_original": 55.0,
+          "unit_original": "g-CO2/L-soln",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "cumulative CO2 absorbed after 60 min at 40 C",
+          "is_derived": 1
+        },
+        {
+          "metric_name": "cyclic_capacity_volumetric",
+          "value": 24.0,
+          "unit": "g_CO2/L_soln",
+          "value_original": 24.0,
+          "unit_original": "g-CO2/L-soln",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "difference between the 40 C maximum and the 70 C minimum CO2 loading; volumetric, no density given so not converted to mol/mol",
+          "is_derived": 1
+        },
+        {
+          "metric_name": "pka",
+          "value": 8.65,
+          "unit": "dimensionless",
+          "value_original": 8.65,
+          "unit_original": "pKa",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "pKa of MDEA measured at 23-26 C",
+          "is_derived": 0
+        }
+      ],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": "volumetric_units_not_converted_no_density",
+        "raw_data_path": "extractions/20261027_08/raw/chowdhury2013_table2_snapshot.json",
+        "raw_data_hash": "77f12622658de0555bcca9e10b232c19b74947940ab014bf5dce8e92f790de15"
+      }
+    },
+    {
+      "test_id": 60,
+      "batch_id": "autobatch_20261030",
+      "source": {
+        "doi": "10.1021/acs.iecr.9b00552",
+        "title": "Comparative Study of CO2 Capture by Aqueous and Nonaqueous 2-Amino-2-methyl-1-propanol Based Absorbents Carried Out by 13C NMR and Enthalpy Analysis",
+        "authors": "Barzagli F.; Giorgi C.; Mani F.; Peruzzini M.",
+        "year": 2019,
+        "journal": "Industrial & Engineering Chemistry Research",
+        "pdf_path": "data/raw_pdfs/10.1021_acs.iecr.9b00552_6a66ebd9.pdf",
+        "pdf_hash": "d00bb7d6a78b50b5006aefd8d0eb8a2a0f1e0c0aa07f2a4e38845c5db0e1a9e7",
+        "loc_type": "table",
+        "loc_label": "p.4366 Table 1, MEA row"
+      },
+      "compound": {
+        "standard_name": "MEA",
+        "inchikey": "HZAXFHJVJLSVMW-UHFFFAOYSA-N",
+        "cas_no": "141-43-5",
+        "smiles": "NCCO",
+        "amine_class": null
+      },
+      "recipe": {
+        "recipe_id": "8e425b36e7ff9627cfd455e624cde0e9aac0eaf7",
+        "recipe_type": "mono",
+        "wt_a": 30.0,
+        "wt_b": null,
+        "water_wt": 70.0,
+        "total_amine_wt": 30.0
+      },
+      "conditions": {
+        "temperature_K": 313.15,
+        "co2_vol_pct": 100.0,
+        "co2_partial_kPa": null,
+        "total_pressure_kPa": null,
+        "gas_flow": null,
+        "liquid_volume": null,
+        "gas_liquid_ratio": null,
+        "initial_loading": 0.0
+      },
+      "loadings": {
+        "rich": 0.609,
+        "lean": null
+      },
+      "performance": [
+        {
+          "metric_name": "equilibrium_loading",
+          "value": 0.609,
+          "unit": "mol_CO2/mol_amine",
+          "value_original": 0.609,
+          "unit_original": "mol CO2/mol amine",
+          "error_value": null,
+          "repeat_count": null,
+          "metric_definition": "Maximum CO2 loading (equilibrium capacity) of 30 wt% aqueous MEA at 313.15 K under pure CO2 in a batch absorber, 8 h to equilibrium; Table 1 MEA row",
+          "is_derived": 0
+        }
+      ],
+      "qc": {
+        "qc_level": "L2",
+        "qc_reason": "table_discrete_point;batch_equilibrium_pure_CO2_8h;initial_loading_fresh_unloaded_solution;single_MEA_reference_row_30wt%",
+        "raw_data_path": "extractions/autobatch_20261030/raw/barzagli2019_table1_snapshot.json",
+        "raw_data_hash": "1c4f752992e9d1f88b7f9049b00f1ac71a337a8c8f08c0b335b4335a5307d101"
+      }
+    }
+  ]
+}
