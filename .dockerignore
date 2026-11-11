@@ -1,0 +1,10 @@
+.git
+.venv
+tools/.venv
+web/node_modules
+web/dist
+data/raw_pdfs
+data/backups
+data/control
+extractions
+release

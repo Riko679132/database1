@@ -24,10 +24,12 @@ venv/
 # tools/ 独立环境（campus-paper-fetch + playwright，体积数百 MB）
 tools/.venv/
 
-# Web 前端（node_modules、构建产物、脱敏快照均不入库）
+# Web 前端（node_modules、构建产物不入库；公开快照随仓库发布，供静态部署）
 web/node_modules/
 web/dist/
-web/public/data/
+web/public/data/*
+!web/public/data/ccus_public.sqlite
+!web/public/data/meta.json
 web/public/*.wasm
 
 # 打包与生成物

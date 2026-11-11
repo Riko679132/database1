@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { createSqliteProvider } from './data/sqliteProvider';
 import type { DataProvider, Facets, Filters, Perf, SnapshotMeta } from './data/types';
 import { defaultFilters } from './data/presets';
-import { isConsoleRoute, useRoute } from './data/routing';
+import { CONSOLE_ENABLED, isConsoleRoute, useRoute } from './data/routing';
 import { Nav } from './components/Nav';
 import { HomePage } from './pages/HomePage';
 import { SearchPage } from './pages/SearchPage';
@@ -18,7 +18,8 @@ interface Boot {
 }
 
 export default function App() {
-  const route = useRoute();
+  const rawRoute = useRoute();
+  const route = CONSOLE_ENABLED || !isConsoleRoute(rawRoute) ? rawRoute : ({ name: 'home' } as const);
   const [boot, setBoot] = useState<Boot | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [filters, setFilters] = useState<Filters>(defaultFilters);

@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 
+export const CONSOLE_ENABLED = import.meta.env.VITE_CONSOLE !== 'off';
+
 export type Route =
   | { name: 'home' }
   | { name: 'search' }

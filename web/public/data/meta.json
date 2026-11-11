@@ -1,0 +1,116 @@
+{
+  "generated_at": "2026-11-11T04:17:43+00:00",
+  "source_file": "ccus.sqlite",
+  "source_sha256": "588eb31767f3f061d02e5d63156e0a76dcb996c55eba799cc407d900757c919b",
+  "test_count": 63,
+  "performance_count": 73,
+  "literature_l2": 38,
+  "simulation": 15,
+  "source_count": 17,
+  "year_min": 1992,
+  "year_max": 2027,
+  "metrics": {
+    "aard_equilibrium_co2_partial_pressure": {
+      "count": 1,
+      "min": 1.53,
+      "max": 1.53,
+      "unit": "%"
+    },
+    "absorption_amount_volumetric": {
+      "count": 1,
+      "min": 55.0,
+      "max": 55.0,
+      "unit": "g_CO2/L_soln"
+    },
+    "absorption_rate_volumetric": {
+      "count": 1,
+      "min": 1.56,
+      "max": 1.56,
+      "unit": "g_CO2/(L_soln*min)"
+    },
+    "annual_energy_consumption_reduction": {
+      "count": 1,
+      "min": 40.0,
+      "max": 40.0,
+      "unit": "%"
+    },
+    "co2_removal_efficiency": {
+      "count": 1,
+      "min": 89.9,
+      "max": 89.9,
+      "unit": "%"
+    },
+    "cost_per_tonne_co2": {
+      "count": 3,
+      "min": 26.9,
+      "max": 97.8,
+      "unit": "EUR/t_CO2"
+    },
+    "cyclic_capacity": {
+      "count": 6,
+      "min": 0.1573,
+      "max": 0.45,
+      "unit": "mol CO2/mol amine"
+    },
+    "cyclic_capacity_volumetric": {
+      "count": 1,
+      "min": 24.0,
+      "max": 24.0,
+      "unit": "g_CO2/L_soln"
+    },
+    "equilibrium_loading": {
+      "count": 31,
+      "min": 0.244,
+      "max": 0.911,
+      "unit": "mol_CO2/mol_amine"
+    },
+    "initial_absorption_rate": {
+      "count": 5,
+      "min": 0.000137,
+      "max": 0.0025,
+      "unit": "mol/L/s"
+    },
+    "initial_desorption_rate": {
+      "count": 3,
+      "min": 0.00013,
+      "max": 0.000348,
+      "unit": "mol_CO2/(mol_amine*s)"
+    },
+    "iron_solubility": {
+      "count": 4,
+      "min": 1.5,
+      "max": 250.0,
+      "unit": "mg/L"
+    },
+    "model_prediction_deviation": {
+      "count": 1,
+      "min": 7.0,
+      "max": 7.0,
+      "unit": "%"
+    },
+    "pka": {
+      "count": 1,
+      "min": 8.65,
+      "max": 8.65,
+      "unit": "dimensionless"
+    },
+    "regeneration_efficiency": {
+      "count": 5,
+      "min": 29.3,
+      "max": 55.0,
+      "unit": "%"
+    },
+    "regeneration_energy": {
+      "count": 7,
+      "min": 2.94,
+      "max": 105.1,
+      "unit": "GJ/t_CO2"
+    },
+    "regeneration_heat": {
+      "count": 1,
+      "min": 3.72,
+      "max": 3.72,
+      "unit": "GJ/t_CO2"
+    }
+  }
+}

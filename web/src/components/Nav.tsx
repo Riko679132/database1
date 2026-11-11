@@ -1,5 +1,5 @@
 import { fmtStamp } from '../data/format';
-import { href, isConsoleRoute, type Route } from '../data/routing';
+import { CONSOLE_ENABLED, href, isConsoleRoute, type Route } from '../data/routing';
 import type { SnapshotMeta } from '../data/types';
 
 export function Nav({ route, meta }: { route: Route; meta: SnapshotMeta | null }) {
@@ -20,9 +20,11 @@ export function Nav({ route, meta }: { route: Route; meta: SnapshotMeta | null }
         <a href={href.search} className={route.name === 'search' ? 'active' : ''}>
           数据检索
         </a>
-        <a href={href.console} className={isConsoleRoute(route) ? 'active' : ''}>
-          工作台
-        </a>
+        {CONSOLE_ENABLED && (
+          <a href={href.console} className={isConsoleRoute(route) ? 'active' : ''}>
+            工作台
+          </a>
+        )}
       </nav>
 
       {meta && (
